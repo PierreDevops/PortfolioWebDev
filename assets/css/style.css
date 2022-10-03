@@ -1,18 +1,40 @@
-:root {
-    --background: #141414;
-    --element-background: #262626;
-    --text: #FFFFFF;
-    --text-color: #E00000;
-    --xxl: 65px;
-    --xl: 54px;
-    --l: 44px;
-    --m: 37px;
-    --s: 31px;
-    --xs: 25px;
-    --base: 18px;
-    --font: "Poppins", sans-serif;
-}
+/* x {
+color
+background
+font (family, size, wight...)
+border
 
+    hight
+    width
+
+
+    padding
+    margin
+    border
+
+    position: ...
+    e proprietà annesse
+
+    display: flex;
+    e proprietà annesse
+} */
+
+:root {
+    --background: #262626;
+    --menu-background: #333333;
+    --text: #ffffff;
+    --inactive-test: #f9fafa;
+    --color-text: #e00000;
+
+    --font-fam: "Poppins", "sans-serif";
+    --font-xxl: 65px;
+    --font-xl: 54px;
+    --font-l: 44px;
+    --font-m: 37px;
+    --font-s: 31px;
+    --font-xs: 25px;
+    --font-base: 18px;
+}
 
 * {
     margin: 0;
@@ -20,75 +42,156 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: var(--font-fam);
+}
+
 .page {
     height: 100vh;
     width: 100%;
-    background-color: var(--element-background);
 }
 
+
+/* HOME PAGE  */
+.home {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nav Menu  */
 .menu {
-    height: 15%;
+    /* border: 1px solid red; */
+    height: 15vh;
     width: 100%;
-    padding-left: 12%;
-    padding-right: 12%;
+    padding: 0 10%;
 
     position: fixed;
+    top: 0;
+    left: 0;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    background-color: #ffffff;
 }
 
 .menu__logo {
-    font-size: var(--m);
+    font-size: var(--font-m);
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .menu__dropdown {
     position: relative;
 }
 
-.menu__title {
-    font-size: var(--base);
+.dropdown__title {
+    font-size: var(--font-base);
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    position: relative;
+
+    z-index: 2;
 }
 
-
-.menu__list {
+.menu__dropdown:hover .dropdown__list {
     position: absolute;
     top: 0;
-    left: 0;
+    right: -35px;
 
     display: flex;
     flex-direction: column;
 
     padding-top: 50px;
-    background-color: blue;
+
+    z-index: 1;
+
+    background-color: white;
 }
 
-.menu__list li {
+.dropdown__list {
+    display: none;
+}
+
+.dropdown__item {
     list-style: none;
+    padding: 0 20px 10px 20px;
+
+    font-size: var(--font-base);
+
+}
+
+.dropdown__item a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+
+/* Home Content  */
+
+.menu__dummy {
+    height: 15vh;
+    width: 100%;
+}
+
+.home__content {
+    /* border: 1px solid blue; */
+    height: 60vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+}
+
+.content__container {
+    /* border: 1px solid green; */
+    height: 40vh;
+    width: 100%;
+    padding-left: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.content__1 {
+    font-size: var(--font-s);
+    font-weight: 700;
+
+}
+
+.content__2 {
+    font-size: var(--font-l);
+    font-weight: 700;
+
+}
+
+.content__3 {
+    font-size: var(--font-s);
+    font-weight: 700;
+}
+
+
+/* Skill List  */
+.home__skill {
+    height: 25vh;
+    width: 100%;
 }
 
 
 
-/* Mobile Query */
-@media only screen and (max-width: 360px) {
-    body {
-        background-color: red;
-    }
-}
 
-/* Tablet Query */
-@media only screen and (min-width: 361px) and (max-width: 1279px) {
-    body {
-        background-color: yellow;
-    }
-}
 
-/* Desktop Query */
-@media only screen and (min-width: 1280px) {
-    body {
-        
-    }
-}
+
+
+
+
+
+
+
+
+
