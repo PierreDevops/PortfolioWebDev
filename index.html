@@ -9,13 +9,16 @@
 </head>
 
 <body>
+<!-- ------------------------------------------------------------------------------------------------- -->
+    <!-- HOME -->
     <div class="home page">
 
+        <!-- Home__nav -->
         <nav class="menu">
-            <div class="menu__logo">Portfo<span>lio</span></div>
+            <h2 class="menu__logo">Portfo<span class="text-color">lio</span></h2>
 
             <div class="menu__dropdown">
-                <span class="dropdown__title">MENU</span>
+                <h5 class="dropdown__title">MENU</h5>
 
                 <ul class="dropdown__list">
                     <li class="dropdown__item"><a href="#">Home</a></li>
@@ -26,47 +29,57 @@
             </div>
         </nav>
 
+        <!-- Home__nav-dummy -->
         <div class="menu__dummy"></div>
 
-        <div class="home__content">
-            <div class="content__container">
-                <div class="content__1">Hi, my name is</div>
-                <div class="content__2">Pierluigi Bertoli</div>
-                <div class="content__3">I'm a Web Developer</div>    
+        <!-- Home__content -->
+            <div class="home__content">
+                <h4 class="content__1"><span class="text-color">Hi,</span> my name is</h4>
+                <h1 class="content__2">Pierluigi Bertoli</h1>
+                <h3 class="content__3">I'm a <span class="text-color">Web Developer</span></h3>    
             </div>
-        </div>
 
-        <!-- SKILL LIST  -->
+        <!-- Home__skill-list  -->
         <div class="home__skill">
-            <div><img class="skill__1" src="assets/icons/html5-icon.svg" alt="html5-icon"></div>
-            <progress class="test-bar" value="50" max="100">50%</progress>
-            <img class="skill__2" src="assets/icons/css3-icon.svg" alt="css3-icon">
-            <img class="skill__3" src="assets/icons/javascript-icon.svg" alt="javascript-icon">
+            <h5 class="skill__title">My <span class="text-color">Skills:</span></h5>
+            <h6 class="skill-item skill-1">HTML</h6>
+            <h6 class="skill-item skill-2">CSS</h6>
+            <h6 class="skill-item skill-3">JS</h6>
         </div>
     </div>
 
-    <!-- ABOUT PAGE  -->
+
+
+
+
+<!-- ------------------------------------------------------------------------------------------------- -->
+    <!-- ABOUT  -->
     <div class="about page">
         <div class="menu__dummy" style="border: 1px solid blue;"></div>
 
         <div class="about__container">
-            <img class="about__img" src="assets/img/about-img.jpeg" alt="my-photo">
-            <div>
-                <h3>About Me</h3>
-                <h4>Web Developer</h4>
+            <div class="about__subcontainer">
+                <img class="about__img" src="assets/img/about-img.jpeg" alt="my-photo">
+            
+                <!-- <h3>About Me</h3>
+                <h4>Web Developer</h4> -->
+
+            </div>
                 <p>I'm here to provide you my best skills for helping you and your business to improve your
                     personal and business brand and grant you an impactful window towards external market. <br>
                     I love challenges facing up to quickly acquiring more and more skills and responsabilities 
                     growing and learning fast also helped by my curiosity and ability to analyze and solve problems. <br>
                     I am a very sociable person with excellent and recognized interpersonal and collaboration skills 
                     together with an empathetic approach.</p>
-            </div>
+            
             <div>citazione</div>
         </div>
 
 
     </div>
 
+<!-- ------------------------------------------------------------------------------------------------- -->
+    <!-- PORTFOLIO  -->
     <div class="portfolio page">
         <div class="menu__dummy" style="border: 1px solid blue;"></div>
 
@@ -81,6 +94,8 @@
 
     </div>
 
+<!-- ------------------------------------------------------------------------------------------------- -->
+    <!-- FOOTER  -->
     <footer class="contacts footer"></footer>
 </body>
 </html>

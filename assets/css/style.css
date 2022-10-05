@@ -20,22 +20,55 @@ border
 } */
 
 :root {
+    /* Color Palette */
     --background: #262626;
     --menu-background: #333333;
-    --text: #ffffff;
+    --text: #f1f1f1;
     --inactive-test: #f9fafa;
-    --color-text: #e00000;
+    --text-color: #e00000;
 
-    --font-fam: "Poppins", "sans-serif";
+    /* All Font-Family */
+    --font-family: "Poppins", "sans-serif";
+
+    /* Mobile Font-Size  */
+    --font-mobile-h1: 46px;
+    --font-mobile-h2: 41px;
+    --font-mobile-h3: 36px;
+    --font-mobile-h4: 31px;
+    --font-mobile-h5: 25px;
+    --font-mobile-h6: 22px;
+    --font-mobile-p: 18px;
+
+    /* Tablet Font-Size  */
+    --font-tablet-h1: 51px;
+    --font-tablet-h2: 46px;
+    --font-tablet-h3: 41px;
+    --font-tablet-h4: 36px;
+    --font-tablet-h5: 28px;
+    --font-tablet-h6: 25px;
+    --font-tablet-p: 18px;
+
+    /* Desktop Font-Size */
+    --font-desktop-h1: 58px;
+    --font-desktop-h2: 51px;
+    --font-desktop-h3: 46px;
+    --font-desktop-h4: 41px;
+    --font-desktop-h5: 32px;
+    --font-desktop-h6: 25px;
+    --font-desktop-p: 18px;
+
     --font-xxl: 65px;
     --font-xl: 54px;
-    --font-l: 44px;
+    --font-l: 46px;
     --font-m: 37px;
     --font-s: 31px;
     --font-xs: 25px;
     --font-base: 18px;
 }
 
+/* ---------------------------------------------------------------------------- */
+
+/* GLOBAL STYLE  */
 * {
     margin: 0;
     padding: 0;
@@ -43,24 +76,61 @@ border
 }
 
 body {
-    font-family: var(--font-fam);
+    font-family: var(--font-family);
+    color: var(--text);
+    background-color: var(--background);
 }
 
 .page {
     height: 100vh;
     width: 100%;
+    border: 1px solid red;
 }
 
+.menu__dummy {
+    height: 15vh;
+    width: 100%;
+}
 
-/* HOME PAGE  */
+.text-color {
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: var(--font-mobile-h1);
+}
+
+h2 {
+    font-size: var(--font-mobile-h2);
+}
+
+h3 {
+    font-size: var(--font-mobile-h3);
+}
+
+h4 {
+    font-size: var(--font-mobile-h4);
+}
+
+h5 {
+    font-size: var(--font-mobile-h5);
+}
+
+h6 {
+    font-size: var(--font-mobile-h6);
+}
+/* ---------------------------------------------------------------------------- */
+
+/* HOME */
 .home {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
-/* Nav Menu  */
+/* Home__nav */
 .menu {
-    border: 1px solid red;
+    border: 1px solid blue;
     height: 15vh;
     width: 100%;
     padding: 0 10%;
@@ -72,12 +142,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
 .menu__logo {
-    font-size: var(--font-m);
-    font-weight: 700;
     letter-spacing: 0.5px;
 }
 
@@ -86,28 +153,28 @@ body {
 }
 
 .dropdown__title {
-    font-size: var(--font-base);
     font-weight: 700;
     letter-spacing: 1px;
 
     position: relative;
-
     z-index: 2;
+
+    cursor: pointer;
 }
 
 .menu__dropdown:hover .dropdown__list {
-    position: absolute;
-    top: 0;
-    right: -35px;
-
-    display: flex;
-    flex-direction: column;
+    background-color: var(--menu-background);
+    border-radius: 10px;
 
     padding-top: 50px;
 
+    position: absolute;
+    top: 0;
+    right: -20px;
     z-index: 1;
 
-    background-color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .dropdown__list {
@@ -115,42 +182,30 @@ body {
 }
 
 .dropdown__item {
+    font-size: var(--font-mobile-p);
+
+    padding: 0px 20px 10px 20px;
+
     list-style: none;
-    padding: 0 20px 10px 20px;
-
-    font-size: var(--font-base);
-
 }
 
 .dropdown__item a {
+    color: var(--inactive-test);
     text-decoration: none;
-    color: black;
     font-weight: 500;
 }
 
-
-/* Home Content  */
-
-.menu__dummy {
-    height: 15vh;
-    width: 100%;
+.dropdown__item a:hover {
+    border-bottom: 1px solid var(--text-color);
+    transition: 0.5s;
 }
 
+
+
+/* Home__content  */
 .home__content {
-    border: 1px solid blue;
-    height: 60vh;
-    width: 100%;
-
-    display: flex;
-    align-items: center;
-
-}
-
-.content__container {
-    border: 1px solid green;
     height: 40vh;
     width: 100%;
-    /* padding-left: 20px; */
 
     display: flex;
     flex-direction: column;
@@ -159,30 +214,25 @@ body {
 }
 
 .content__1 {
-    font-size: var(--font-s);
-    font-weight: 700;
-
+    font-size: var(--font-mobile-h4);
 }
 
 .content__2 {
-    font-size: var(--font-l);
-    font-weight: 700;
-
+    font-size: var(--font-mobile-h1);
 }
 
 .content__3 {
-    font-size: var(--font-s);
-    font-weight: 700;
+    font-size: var(--font-mobile-h3);
 }
 
 
+/* ---------------------------------------------------------------------------- */
 /* Skill List  */
 .home__skill {
     height: 25vh;
     width: 100%;
-    padding-left: 25px;
 
-    font-size: var(--font-base);
+    font-size: 25px;
     font-weight: 700;
     letter-spacing: 0.5px;
 
@@ -192,22 +242,71 @@ body {
     align-items: flex-start;
 }
 
-.home__skill img {
-    height: 40px;
-    width: 40px;
+.skill__title {
+    margin: 0 auto;
+}
+
+.skill-item {
+    /* border: 1px solid red; */
+    width: 60px;
+    height: 25px;
+    padding-left: 30px;
+
     position: relative;
+}
+
+.skill-1::after {
+    content: "";
+    position: absolute;
+    left: 65px;
+    bottom: 12.5px;
+
     background-color: #e00000;
-    padding: 6px;
-    border-radius: 50px;
+    border-radius: 5px;
+    height: 5px;
+    width: 0%;
+    transition: 0.5s;
 }
 
-.test-bar {
-    height: 50px;
-    width: 250px;
-
-    -webkit-appearance: none;
-    appearance: none;
+.skill-1:hover::after {
+    width: 300%;
 }
+
+.skill-2::after {
+    content: "";
+    position: absolute;
+    left: 65px;
+    bottom: 12.5px;
+
+    background-color: #e00000;
+    border-radius: 5px;
+    height: 5px;
+    width: 0%;
+    transition: 0.5s;
+}
+
+.skill-2:hover::after {
+    width: 300%;
+}
+.skill-3::after {
+    content: "";
+    position: absolute;
+    left: 65px;
+    bottom: 12.5px;
+
+    background-color: #e00000;
+    border-radius: 5px;
+    height: 5px;
+    width: 0%;
+    transition: 0.5s;
+}
+
+.skill-3:hover::after {
+    width: 300%;
+}
+
+
+
 
 
 
@@ -217,9 +316,10 @@ body {
 
     height: 85vh;
     width: 100%;
-    padding: 50px 25px;
+}
 
-
+.about__subcontainer {
+    display: flex;
 }
 
 .about__img {
@@ -255,8 +355,32 @@ body {
 
 
 
+@media only screen and (max-width: 480px) {
+    
+}
 
+@media only screen and (min-width: 481px) and (max-width: 1199px) {
+    body {
+        color: red;
+    }
+}
 
+@media only screen and (min-width: 1200px) {
+    .page {
+        height: 100vh;
+        width: 1200px;
+
+        margin: 0 auto;
+    }
+
+    .menu {
+        width: 1200px;
+        left: auto;
+        right: auto;
+    }
+
+    
+}
 
 
 
