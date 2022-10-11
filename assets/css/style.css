@@ -57,13 +57,6 @@ border
     --font-desktop-h6: 25px;
     --font-desktop-p: 18px;
 
-    --font-xxl: 65px;
-    --font-xl: 54px;
-    --font-l: 46px;
-    --font-m: 37px;
-    --font-s: 31px;
-    --font-xs: 25px;
-    --font-base: 18px;
 }
 
 /* ---------------------------------------------------------------------------- */
@@ -143,15 +136,12 @@ h6 {
     align-items: center;
     justify-content: space-between;
 }
-
 .menu__logo {
     letter-spacing: 0.5px;
 }
-
 .menu__dropdown {
     position: relative;
 }
-
 .dropdown__title {
     font-weight: 700;
     letter-spacing: 1px;
@@ -161,7 +151,6 @@ h6 {
 
     cursor: pointer;
 }
-
 .menu__dropdown:hover .dropdown__list {
     background-color: var(--menu-background);
     border-radius: 10px;
@@ -176,11 +165,9 @@ h6 {
     display: flex;
     flex-direction: column;
 }
-
 .dropdown__list {
     display: none;
 }
-
 .dropdown__item {
     font-size: var(--font-mobile-p);
 
@@ -188,13 +175,11 @@ h6 {
 
     list-style: none;
 }
-
 .dropdown__item a {
     color: var(--inactive-test);
     text-decoration: none;
     font-weight: 500;
 }
-
 .dropdown__item a:hover {
     border-bottom: 1px solid var(--text-color);
     transition: 0.5s;
@@ -345,8 +330,10 @@ h6 {
 
 .item {
     border: 1px solid black;
-    flex: 0 0 100%;
     padding: 24px;
+
+
+    flex: 0 0 100%;
     border-radius: 8px;
     scroll-snap-align: start;
 }
@@ -354,17 +341,39 @@ h6 {
 
 
 
-
+/* Mobile Query  */
 @media only screen and (max-width: 480px) {
     
 }
 
+/* Tablet Query  */
 @media only screen and (min-width: 481px) and (max-width: 1199px) {
-    body {
-        color: red;
+    h1 {
+        font-size: var(--font-tablet-h1);
+    }
+    
+    h2 {
+        font-size: var(--font-tablet-h2);
+    }
+    
+    h3 {
+        font-size: var(--font-tablet-h3);
+    }
+    
+    h4 {
+        font-size: var(--font-tablet-h4);
+    }
+    
+    h5 {
+        font-size: var(--font-tablet-h5);
+    }
+    
+    h6 {
+        font-size: var(--font-tablet-h6);
     }
 }
 
+/* Desktop Query  */
 @media only screen and (min-width: 1200px) {
     .page {
         height: 100vh;
@@ -379,6 +388,29 @@ h6 {
         right: auto;
     }
 
+    h1 {
+        font-size: var(--font-desktop-h1);
+    }
+    
+    h2 {
+        font-size: var(--font-desktop-h2);
+    }
+    
+    h3 {
+        font-size: var(--font-desktop-h3);
+    }
+    
+    h4 {
+        font-size: var(--font-desktop-h4);
+    }
+    
+    h5 {
+        font-size: var(--font-desktop-h5);
+    }
+    
+    h6 {
+        font-size: var(--font-desktop-h6);
+    }
     
 }
 

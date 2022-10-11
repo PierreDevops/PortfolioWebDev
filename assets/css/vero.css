@@ -1,0 +1,435 @@
+:root {
+
+
+    /* !!! FONTS SIZES !!! */
+
+    /* Mobile Font-Size  */
+    --font-mobile-1: 46px;
+    --font-mobile-2: 41px;
+    --font-mobile-3: 36px;
+    --font-mobile-4: 31px;
+    --font-mobile-5: 25px;
+    --font-mobile-6: 22px;
+    --font-mobile-p: 18px;
+    
+    /* Tablet Font-Size  */
+    --font-tablet-1: 51px;
+    --font-tablet-2: 46px;
+    --font-tablet-3: 41px;
+    --font-tablet-4: 36px;
+    --font-tablet-5: 28px;
+    --font-tablet-6: 25px;
+    --font-tablet-p: 18px;
+    
+    /* Desktop Font-Size */
+    --font-desktop-1: 58px;
+    --font-desktop-2: 51px;
+    --font-desktop-3: 46px;
+    --font-desktop-4: 41px;
+    --font-desktop-5: 32px;
+    --font-desktop-6: 25px;
+    --font-desktop-p: 18px;  
+}
+
+
+/* !!! GLOBAL STYLES !!! */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+
+}
+
+.page {
+    height: 100vh;
+    width: 100%;
+}
+
+.dummy-menu {
+    height: 15vh;
+    width: 100%;
+    border: 1px solid red;
+}
+
+/* ------------------------------------------------------- */
+
+/* !!! HEADER (Menu) !!! */
+.menu {
+    height: 15vh;
+    width: 100%;
+
+    padding: 0px 7%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu__logo {
+    font-size: var(--font-mobile-2);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Menu Input  */
+#menu__responsive-navbar {
+    display: none;
+}
+
+.menu__responsive-navbar-title {
+    font-size: var(--font-mobile-p);
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+.menu__navbar ul {
+    list-style-type: none;
+
+}
+
+.menu__navbar ul li {
+    float: left;
+}
+
+.menu__navbar ul li a {
+    font-size: var(--font-mobile-p);
+    font-weight: 500;
+
+    padding: 20px;
+
+    display: block;
+}
+
+.menu__navbar ul li a:hover {
+    color: red;
+    background-color: greenyellow;
+}
+
+
+/* !!! HOME-PAGE !!! */
+
+/* Content  */
+.home__content {
+    border: 1px solid blue;
+    height: 60vh;
+    width: 100%;
+
+    padding: 3% 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.content-1 {
+    font-size: var(--font-mobile-5);
+    font-weight: 700;
+
+}
+
+.content-2 {
+    font-size: var(--font-mobile-1);
+    font-weight: 700;
+}
+
+.content-3 {
+    font-size: var(--font-mobile-4);
+    font-weight: 700;
+}
+
+
+/* Skill-List  */
+.home__skill-list {
+    border: 1px solid green;
+    height: 25vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.skill-list__title {
+    font-size: var(--font-mobile-6);
+
+    text-align: center;
+}
+
+.home__skill-list ul {
+    list-style-type: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.skill-item {
+    font-size: var(--font-mobile-p);
+    background-color: greenyellow;
+
+    margin-bottom: 50px;
+}
+
+
+
+
+/* !!! ABOUT PAGE !!! */
+.about__content-container {
+    padding: 2%;
+}
+
+.about__img {
+    height: 200px;
+    width: auto;
+
+    padding-right: 15px;
+    padding-bottom: 15px;
+
+    float: left;
+}
+
+
+.about__header {
+    font-size: var(--font-mobile-6);
+
+    padding-bottom: 15px;
+}
+
+.about__quote {
+    font-size: var(--font-mobile-6);
+    font-weight: 500;
+
+}
+
+.about__bio {
+    font-size: var(--font-mobile-p);
+
+    clear: both;
+}
+
+
+
+/* !!! PORTFOLIO PAGE !!! */
+.portfolio__container {
+    border: 1px solid red;
+
+    width: 100%;
+
+    margin-top: 100px;
+    padding: 24px;
+
+    display: flex;
+
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    scroll-padding: 24px;
+    gap: 50px;
+}
+
+.portfolio__card {
+    border: 1px solid black;
+
+    height: 350px;
+    width: 300px;
+
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+}
+
+.card__img {
+    background-color: aqua;
+
+    height: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*!!! QUERIES !!!*/
+
+/* Mobile Query */
+@media only screen and (max-width: 480px) {
+
+    /* !!! HEADER (Menu) !!! */
+    .menu__navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        display: none;
+    }
+
+    .menu__navbar ul li {
+        width: 100%;
+    }
+
+    #menu__responsive-navbar:checked ~ .menu__navbar {
+        display: initial;
+    }
+
+
+    .about__bio {
+        font-size: 16px;
+    }
+}
+
+
+/* Tablet Query */
+@media only screen and (min-width: 481px) and (max-width: 1199px) {
+
+    /* !!! HEADER (Menu) !!! */
+    .menu__logo {
+        font-size: var(--font-tablet-2);
+    }
+
+    .menu__navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        display: none;
+    }
+
+    .menu__navbar ul li {
+        width: 100%;
+    }
+
+    #menu__responsive-navbar:checked ~ .menu__navbar {
+        display: initial;
+    }
+
+
+    /* !!! HOME-PAGE !!! */   
+
+    /* Content   */
+    .content-1 {
+        font-size: var(--font-tablet-5);
+    }
+
+    .content-2 {
+        font-size: var(--font-tablet-1);
+    }
+
+    .content-3 {
+        font-size: var(--font-tablet-4);
+    }
+
+
+
+    /* !!! ABOUT PAGE !!! */
+    .about__img {
+        height: 300px;
+        width: auto;
+
+    }
+
+    .about__header {
+        font-size: var(--font-tablet-4);
+    }
+
+    .about__quote {
+        font-size: var(--font-tablet-5); 
+
+    }
+
+    .about__bio {
+        line-height: 32px;
+    }
+    
+}
+
+    
+
+
+/* Desktop Query */
+@media only screen and (min-width: 1200px) {
+
+    /* !!! GLOBAL STYLES !!! */
+    .page {
+        border: 2px solid black;
+
+        height: 100vh;
+        width: 1200px;
+
+        margin: 0 auto;
+    }
+
+
+    /* !!! HEADER (Menu) !!! */
+    .menu__logo {
+        font-size: var(--font-desktop-2);
+    }
+
+    .menu__responsive-navbar-title {
+        display: none;
+    }
+
+    .menu__navbar ul li a {
+        margin-left: 15px;
+
+        padding: 10px 20px;
+    }
+
+
+    /* !!! HOME-PAGE !!! */
+
+    /* Content  */
+    .content-1 {
+        font-size: var(--font-desktop-5);
+    }
+    
+    .content-2 {
+        font-size: var(--font-desktop-1);
+    }
+    
+    .content-3 {
+        font-size: var(--font-desktop-4);
+    }
+    
+
+    /* !!! ABOUT PAGE !!! */
+    .about__img {
+        height: 350px;
+        width: auto;
+    
+    }
+    
+    .about__header {
+        font-size: var(--font-desktop-4);
+    }
+    
+    .about__quote {
+        font-size: var(--font-desktop-5); 
+    }
+    
+    .about__bio {
+        line-height: 32px;
+    }
+    
+
+
+    
+}
