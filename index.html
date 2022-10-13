@@ -5,97 +5,130 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+
+    <!-- Link Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <!-- Link CSS File -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Link Google-Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Link Font-Awesome  -->
+    <script src="https://kit.fontawesome.com/c63bcb5953.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<!-- ------------------------------------------------------------------------------------------------- -->
-    <!-- HOME -->
-    <div class="home page">
-
-        <!-- Home__nav -->
-        <nav class="menu">
-            <h2 class="menu__logo">Portfo<span class="text-color">lio</span></h2>
-
-            <div class="menu__dropdown">
-                <h5 class="dropdown__title">MENU</h5>
-
-                <ul class="dropdown__list">
-                    <li class="dropdown__item"><a href="#">Home</a></li>
-                    <li class="dropdown__item"><a href="#">About</a></li>
-                    <li class="dropdown__item"><a href="#">Portfolio</a></li>
-                    <li class="dropdown__item"><a href="#">Contacts</a></li>
-                </ul>
-            </div>
+    <header class="menu">
+        <a href="#" class="menu__logo">Portfo<span class="text-highlights">lio</span></a>
+        <input type="checkbox" id="menu__responsive-navbar">
+        <label for="menu__responsive-navbar" class="menu__responsive-navbar-title">Menu</label>
+        <nav class="menu__navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
         </nav>
+    </header>
 
-        <!-- Home__nav-dummy -->
-        <div class="menu__dummy"></div>
+    <div class="page" id="home">
+        <div class="dummy-menu"></div>
+        <div class="home__content">
+            <div class="content-1">Hi, my <span class="text-highlights">name</span> is</div>
+            <div class="content-2"><span class="text-highlights">Pier</span>luigi Bertoli</div>
+            <div class="content-3">I'm a Web <span class="text-highlights">Developer</span></div>
+        </div>
+        <div class="home__skill-list">
+            <h6 class="skill-list__title">My <span class="text-highlights">Skills:</span></h6>
+            <ul>
+                <li class="skill-item"><i class="fa-brands fa-html5 fa-2xl"></i></li>
+                <li class="skill-item"><i class="fa-brands fa-css3-alt fa-2xl"></i></li>
+                <li class="skill-item"><i class="fa-brands fa-square-js fa-2xl"></i></li>
+            </ul>
+        </div>
+    </div>
 
-        <!-- Home__content -->
-            <div class="home__content">
-                <h4 class="content__1"><span class="text-color">Hi,</span> my name is</h4>
-                <h1 class="content__2">Pierluigi Bertoli</h1>
-                <h3 class="content__3">I'm a <span class="text-color">Web Developer</span></h3>    
+    <div class="page" id="about">
+        <div class="dummy-menu"></div>
+        <div class="about__content-container">
+            <img class="about__img" src="assets/img/about-img.jpeg" alt="my-photo">
+            <h6 class="about__header">Web <span class="text-highlights">Developer</span></h6>
+            <em class="about__quote">"I never lose. I either win or <span class="text-highlights">LEARN.</span>"</em>
+            <p class="about__bio">I'm here to provide you my best skills for helping you and your business to improve   your
+                personal and business brand and grant you an impactful window towards external market. <br>
+                I love challenges facing up to quickly acquiring more and more skills and responsabilities 
+                growing and learning fast also helped by my curiosity and ability to analyze and solve problems. <br>
+                I am a very sociable person with excellent and recognized interpersonal and collaboration skills 
+                together with an empathetic approach.
+            </p>            
+        </div>   
+    </div>
+
+    <div class="page" id="portfolio">
+        <div class="dummy-menu"></div>
+        <div class="portfolio__container">
+            <div class="portfolio__card">
+                <div class="card__img"></div>
+                <h6 class="card__title">PROJECT 1</h6>
+                <p class="card__text">lorem Ipsum...</p>
+                <a class="card__btn" href="#">READ MORE</a>
             </div>
-
-        <!-- Home__skill-list  -->
-        <div class="home__skill">
-            <h5 class="skill__title">My <span class="text-color">Skills:</span></h5>
-            <h6 class="skill-item skill-1">HTML</h6>
-            <h6 class="skill-item skill-2">CSS</h6>
-            <h6 class="skill-item skill-3">JS</h6>
-        </div>
-    </div>
-
-
-
-
-
-<!-- ------------------------------------------------------------------------------------------------- -->
-    <!-- ABOUT  -->
-    <div class="about page">
-        <div class="menu__dummy" style="border: 1px solid blue;"></div>
-
-        <div class="about__container">
-            <div class="about__subcontainer">
-                <img class="about__img" src="assets/img/about-img.jpeg" alt="my-photo">
-            
-                <!-- <h3>About Me</h3>
-                <h4>Web Developer</h4> -->
-
+            <div class="portfolio__card">
+                <div class="card__img"></div>
+                <h6 class="card__title">PROJECT 2</h6>
+                <p class="card__text">lorem Ipsum...</p>
+                <a class="card__btn" href="#">READ MORE</a>
             </div>
-                <p>I'm here to provide you my best skills for helping you and your business to improve your
-                    personal and business brand and grant you an impactful window towards external market. <br>
-                    I love challenges facing up to quickly acquiring more and more skills and responsabilities 
-                    growing and learning fast also helped by my curiosity and ability to analyze and solve problems. <br>
-                    I am a very sociable person with excellent and recognized interpersonal and collaboration skills 
-                    together with an empathetic approach.</p>
-            
-            <div>citazione</div>
+            <div class="portfolio__card">
+                <div class="card__img"></div>
+                <h6 class="card__title">PROJECT 3</h6>
+                <p class="card__text">lorem Ipsum...</p>
+                <a class="card__btn" href="#">READ MORE</a>
+            </div>
+            <div class="portfolio__card">
+                <div class="card__img"></div>
+                <h6 class="card__title">PROJECT 4</h6>
+                <p class="card__text">lorem Ipsum...</p>
+                <a class="card__btn" href="#">READ MORE</a>
+            </div>
         </div>
-
-
     </div>
 
-<!-- ------------------------------------------------------------------------------------------------- -->
-    <!-- PORTFOLIO  -->
-    <div class="portfolio page">
-        <div class="menu__dummy" style="border: 1px solid blue;"></div>
-
-        <div class="container">
-            <div class="item">ciao 1</div>
-            <div class="item">ciao 2</div>
-            <div class="item">ciao 2</div>
-            <div class="item">ciao 2</div>
-            <div class="item">ciao 2</div>
-
-        </div>
-
+    <div class="page" id="feedback">
+        <div class="dummy-menu"></div>
+        <div class="form__container">
+            <h5 class="form__title">...Look forward to your <span class="text-highlights">Feedback</span></h5>
+            <form action="https://formspree.io/f/xdojdwjv" method="post">
+                <input type="text"
+                       id="full-name" 
+                       name="full-name"
+                       placeholder="Full Name">
+                <input type="email"
+                       id="email" 
+                       name="email"
+                       placeholder="Email">
+                <div class=" comment__row">
+                    <label for="comment">Leave a <span>Comment</span></label>
+                    <textarea name="comment" id="comment" cols="15" rows="5">You can improve your portfolio by...</textarea>
+                </div>
+                <button>SUBMIT</button>
+            </form>
+        </div> 
     </div>
 
-<!-- ------------------------------------------------------------------------------------------------- -->
-    <!-- FOOTER  -->
-    <footer class="contacts footer"></footer>
+    <footer class="footer" id="contacts">
+        <div class="footer__social">
+            <a href="#"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>
+            <a href="#"><i class="fa-brands fa-github fa-2xl"></i></a>
+            <a href="#"><i class="fa-regular fa-envelope fa-2xl"></i></a>
+        </div>
+        <p class="footer__copyright">Pierluigi Bertoli &copy 2022</p>
+    </footer>
 </body>
 </html>
